@@ -194,6 +194,37 @@
     .admin-card-head{align-items:center}.admin-status{flex:none;padding:4px 8px;border-radius:20px;font-size:9px;font-weight:800}.admin-status.pending{background:#3d3523;color:#f0ca64}.admin-status.accepted{background:#253a28;color:#92d49a}.admin-status.rejected{background:#392729;color:#e7a0a3}.admin-actions{display:flex;align-items:center;gap:8px;margin-top:11px;flex-wrap:wrap}.admin-action{border:1px solid #4a534b;border-radius:7px;padding:7px 11px;background:#252b26;color:#dce4dc;font-size:10px;font-weight:800}.admin-action.accept{background:#c5f36b;border-color:#c5f36b;color:#151812}.admin-action.reject{border-color:#7f3c40;color:#f2a2a7}.admin-action.reopen{border-color:#53684a;color:#c5f36b}.admin-slot-note{color:#96d29a;font-size:10px;margin-right:auto}
     @media(max-width:680px){.admin-card-head{align-items:flex-start}.admin-card-head strong{max-width:65%}.admin-action{padding:8px 12px}}
     </style>
+  <style id="mobile-layout-fix">
+    @media (max-width: 680px) {
+      .nav { gap: 10px; }
+      .nav-actions { gap: 10px; }
+      .hero-grid { position: relative; min-height: 560px; }
+      .hero-grid > div:first-child {
+        top: 36px;
+        left: 20px;
+        right: 20px;
+        width: auto;
+        padding: 0;
+        transform: none;
+      }
+      .hero h1 { font-size: clamp(38px, 11vw, 43px); line-height: 1.08; letter-spacing: -1.5px; }
+      .hero-copy { max-width: 100%; font-size: 16px; line-height: 1.55; margin-bottom: 22px; }
+      .hero-buttons { display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 100%; gap: 10px; margin: 0; }
+      .hero-buttons .btn { width: 100%; min-height: 48px; max-width: 100%; font-size: 12px; }
+      .hero-visual { min-height: 560px; }
+      .hero-visual .visual-tag { display: none; }
+    }
+    @media (max-width: 390px) {
+      .nav { gap: 8px; }
+      .nav-actions { gap: 8px; }
+      .logo { gap: 7px; font-size: 12px; }
+      .logo-mark { width: 34px; height: 34px; }
+      .nav .btn.small { padding: 9px 10px; font-size: 10px; white-space: nowrap; }
+      .hero-grid > div:first-child { left: 16px; right: 16px; }
+      .hero h1 { font-size: clamp(36px, 10.5vw, 40px); }
+      .hero-copy { font-size: 15px; }
+    }
+  </style>
 </head>
 <body>
   <div class="topline"><div class="wrap"><span>Нижний Тагил <b>•</b> ул. Кушвинская, 30</span><span class="top-right"><span>Ежедневно <b>09:00–21:00</b></span><span>Без выходных</span></span></div></div>
@@ -216,3 +247,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
